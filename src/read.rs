@@ -56,7 +56,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = i16::from_ne_bytes(bytes.try_into().unwrap());
+        let value = i16::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 2;
         Ok(value)
     }
@@ -67,7 +67,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = i32::from_ne_bytes(bytes.try_into().unwrap());
+        let value = i32::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 4;
         Ok(value)
     }
@@ -78,7 +78,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = i64::from_ne_bytes(bytes.try_into().unwrap());
+        let value = i64::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 8;
         Ok(value)
     }
@@ -98,7 +98,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = u16::from_ne_bytes(bytes.try_into().unwrap());
+        let value = u16::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 2;
         Ok(value)
     }
@@ -109,7 +109,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = u32::from_ne_bytes(bytes.try_into().unwrap());
+        let value = u32::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 4;
         Ok(value)
     }
@@ -120,7 +120,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = u64::from_ne_bytes(bytes.try_into().unwrap());
+        let value = u64::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 8;
         Ok(value)
     }
@@ -131,7 +131,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = f32::from_ne_bytes(bytes.try_into().unwrap());
+        let value = f32::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 4;
         Ok(value)
     }
@@ -142,7 +142,7 @@ impl<'a> Reader<'a> for SliceReader<'a> {
             return Err("reader: reached end of slice".into());
         }
         let bytes = &self.slice[self.pos..end];
-        let value = f64::from_ne_bytes(bytes.try_into().unwrap());
+        let value = f64::from_le_bytes(bytes.try_into().unwrap());
         self.pos += 8;
         Ok(value)
     }

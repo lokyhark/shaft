@@ -2,8 +2,7 @@
 name = "shaft"
 version = "0.1.0"
 edition = "2021"
-authors = ["Loky HARK <loky.hark@pm.me>]"
-edition = "2021"
+authors = ["Loky HARK <loky.hark@pm.me>"]
 description = "A minimal and straightforward binary serde implementation."
 readme = "README.md"
 repository = "https://github.com/lokyhark/shaft"
