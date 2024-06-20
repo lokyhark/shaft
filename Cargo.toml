@@ -1,6 +1,6 @@
 [package]
 name = "shaft"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Loky HARK <loky.hark@pm.me>"]
 description = "A minimal and straightforward binary serde implementation."
